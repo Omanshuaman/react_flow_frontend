@@ -144,7 +144,10 @@ function App() {
     };
 
     try {
-      const res = await axios.post("/api/product", newPin);
+      const res = await axios.post(
+        "https://react-flow-backend.onrender.com/api/product",
+        newPin
+      );
       toast(`Saved in database`);
     } catch (err) {
       console.log(err);
